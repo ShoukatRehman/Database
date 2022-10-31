@@ -21,7 +21,7 @@ namespace Connecting_SQL
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            string sqlQuery = "INSERT INTO tbl_student VALUES('" + txt_RgdID.Text + "','" + txt_Name.Text + "','" + txt_Fname.Text + "','" + txt_Mobile.Text + "','" + txt_Rno.Text + "','" + txt_Email.Text + "','" + txt_Address.Text + "')";
+            string sqlQuery = "INSERT INTO tbl_student VALUES('"+txt_RgdID.Text+"','"+txt_Name.Text+"','"+txt_Fname.Text+"','"+txt_Mobile.Text+"','"+txt_Rno.Text+"','"+txt_Email.Text+"','"+txt_Address.Text+"')";
             SqlConnection con = new SqlConnection(ConString);
             con.Open();
             SqlCommand cmd = new SqlCommand(sqlQuery, con);

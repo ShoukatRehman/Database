@@ -38,7 +38,7 @@ namespace Student_Detail
                 txt_Name.Text = DR["Name"].ToString();
                 txt_Fname.Text = DR["FatherName"].ToString();
                 txt_Mobile.Text = DR["Mobile"].ToString();
-                // txt_RollNo.Text = DR["RollNo"].ToString();
+                txt_RNo.Text = DR["RNo"].ToString();
                 txt_Address.Text = DR["Address"].ToString();
                 txt_Email.Text = DR["Email"].ToString();
 
@@ -60,6 +60,16 @@ namespace Student_Detail
             }
            
 
+        }
+
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+            string SqlQuery = "UPDATE tbl_student SET Name='" + txt_Name.Text + "',FatherName='" + txt_Fname.Text + "',Mobile='" + txt_Mobile.Text + "',RNo='" + txt_RNo + "',Address='"+txt_Address.Text+"',Email='"+txt_Email.Text+ "' WHERE RegistrationID='\" + cmb_RegdID.Text + \"' ";
+            SqlConnection con = new SqlConnection(Helper.ConString);
+            con.Open();
+            SqlCommand Cmd = new SqlCommand(SqlQuery, con);
+            Cmd.ExecuteNonQuery();
+            MessageBox.Show("Update successfully!");
         }
     }
 }

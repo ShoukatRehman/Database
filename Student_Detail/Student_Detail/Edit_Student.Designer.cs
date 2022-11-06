@@ -32,7 +32,7 @@
             this.btn_Update = new System.Windows.Forms.Button();
             this.txt_Email = new System.Windows.Forms.TextBox();
             this.txt_Mobile = new System.Windows.Forms.TextBox();
-            this.txt_RollNo = new System.Windows.Forms.TextBox();
+            this.txt_RNo = new System.Windows.Forms.TextBox();
             this.txt_Address = new System.Windows.Forms.TextBox();
             this.txt_Name = new System.Windows.Forms.TextBox();
             this.txt_Fname = new System.Windows.Forms.TextBox();
@@ -61,6 +61,7 @@
             this.btn_Update.TabIndex = 23;
             this.btn_Update.Text = "Update";
             this.btn_Update.UseVisualStyleBackColor = true;
+            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
             // txt_Email
             // 
@@ -76,12 +77,12 @@
             this.txt_Mobile.Size = new System.Drawing.Size(121, 20);
             this.txt_Mobile.TabIndex = 15;
             // 
-            // txt_RollNo
+            // txt_RNo
             // 
-            this.txt_RollNo.Location = new System.Drawing.Point(204, 280);
-            this.txt_RollNo.Name = "txt_RollNo";
-            this.txt_RollNo.Size = new System.Drawing.Size(121, 20);
-            this.txt_RollNo.TabIndex = 17;
+            this.txt_RNo.Location = new System.Drawing.Point(204, 280);
+            this.txt_RNo.Name = "txt_RNo";
+            this.txt_RNo.Size = new System.Drawing.Size(121, 20);
+            this.txt_RNo.TabIndex = 17;
             // 
             // txt_Address
             // 
@@ -224,7 +225,7 @@
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.txt_Email);
             this.Controls.Add(this.txt_Mobile);
-            this.Controls.Add(this.txt_RollNo);
+            this.Controls.Add(this.txt_RNo);
             this.Controls.Add(this.txt_Address);
             this.Controls.Add(this.txt_Name);
             this.Controls.Add(this.txt_Fname);
@@ -250,7 +251,7 @@
         private System.Windows.Forms.Button btn_Update;
         private System.Windows.Forms.TextBox txt_Email;
         private System.Windows.Forms.TextBox txt_Mobile;
-        private System.Windows.Forms.TextBox txt_RollNo;
+        private System.Windows.Forms.TextBox txt_RNo;
         private System.Windows.Forms.TextBox txt_Address;
         private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.TextBox txt_Fname;
